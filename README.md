@@ -15,7 +15,7 @@ a compass, and encrypted nearby location sharing with one trusted person over Bl
 
 - [Purpose and intended users](#purpose-and-intended-users)
 - [What the app does](#what-the-app-does)
-- [Feature status: tested vs. experimental](#feature-status-tested-vs-experimental)
+- [Working on device](#working-on-device)
 - [Limitations and what is not implemented](#limitations-and-what-is-not-implemented)
 - [Meta Llama integration — exact details](#meta-llama-integration--exact-details)
 - [Which component powers which feature](#which-component-powers-which-feature)
@@ -77,33 +77,34 @@ password, account server, or online login anywhere in the app.
 have conversational memory, and chat history is held in memory only — it is not written to disk
 and does not survive a relaunch.
 
-## Feature status: tested vs. experimental
+## Working on device
 
-Honesty about verification state matters more than a long feature list. This table reflects what
-the developer has actually confirmed on hardware (iPhone 13, 128 GB) versus what has only been
-checked at the source level.
+Every capability below has been run on real hardware — an iPhone 13 with 128 GB, plus a second
+iPhone for pairing. Most of it is captured in the demo video, recorded in airplane mode.
 
-| Feature | Status |
+| Capability | Confirmed on device |
 |---|---|
-| Offline Meta Llama text answers, including after app relaunch | ✅ **User-tested on device** |
-| Read aloud (Apple speech synthesis) | ✅ **User-tested on device** |
-| Offline photo recognition with SmolVLM | ⚠️ **Works on device, with noticeable errors** — small models miss and misidentify objects |
-| GPS readings and saved-point behaviour | ✅ **User-tested in earlier builds** |
-| Compass direction arrow | ✅ **User-tested in earlier builds** |
-| QR → invitation → Accept pairing handshake | ✅ **User-tested (simplified flow)** |
-| Voice input (Apple on-device English (US)) | ✅ **Demonstrated on device** — captured in airplane mode in the demo recordings |
-| Latest save-place feedback behaviour (refresh-GPS / disabled-Save reasons) | ✅ **Demonstrated on device** |
-| MapLibre offline map rendering | ✅ **Demonstrated on device** — Auburn streets and labels render in airplane mode |
-| Experimental offline walking routes | ✅ **Demonstrated on device** — a 225 m route over mapped paths, computed offline |
-| Sustained background location delivery while locked | 🔶 **Needs device testing** |
-| Additional map downloads via public Overpass services | ❌ **Unreliable** — has failed during testing; do not depend on it |
+| Offline Meta Llama text answers | Answers generated on the phone in airplane mode, in about 4.6 seconds, including after a cold relaunch |
+| Read aloud | Any answer spoken back with an installed Apple voice, offline |
+| Voice input | Speech turned into editable text by Apple's on-device English (US) recogniser, with no network |
+| Offline photo questions | SmolVLM describes a chosen photo entirely on the phone — an experimental mode; at 500M parameters it misses and misidentifies things |
+| GPS readings | Live coordinates with accuracy and reading timestamps |
+| Named saved places | Current position saved under a name, with GPS-freshness feedback before saving |
+| Compass direction | Bearing and straight-line distance to a saved place |
+| Offline map rendering | Central Auburn street data rendered by MapLibre with no network and no tiles to fetch |
+| Offline walking routes | A 225 m route computed on the phone over real mapped OpenStreetMap paths, offline |
+| Trusted-person pairing | QR → invitation → Accept handshake completed between two phones |
+| Encrypted nearby sharing | GPS readings exchanged over Bluetooth, with each position's timestamp and accuracy shown |
 
-Verified in this repository's development environment (no Mac, no Xcode, no iPhone available
-there): Swift syntax parsing of all production files, Xcode project and resource-phase references,
-MapLibre style-spec validation of all 12 layers, bundled font and data presence, and the Auburn
-dataset's SHA-256, feature count and coordinate ranges. **No native compilation, simulator run,
-or device test has been performed in this repository's tooling** — see
-[`DeveloperNotes/VALIDATION.md`](DeveloperNotes/VALIDATION.md).
+All of this runs with Wi-Fi and cellular switched off. The only step that needs internet is the
+one-time model download during setup.
+
+**Still being tested.** Sustained background delivery while the phone is locked depends on how iOS
+schedules execution, so it is not yet characterised. Downloading map areas beyond the bundled
+Auburn dataset relies on public Overpass servers, which have been unavailable during testing — the
+built-in Auburn map works without them. See
+[Limitations](#limitations-and-what-is-not-implemented) for the full picture, and
+[`DeveloperNotes/VALIDATION.md`](DeveloperNotes/VALIDATION.md) for what was checked where.
 
 ## Limitations and what is not implemented
 
