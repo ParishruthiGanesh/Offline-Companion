@@ -1,0 +1,138 @@
+# ---------------------------------------------------------------------------
+# Xcode build output
+# ---------------------------------------------------------------------------
+build/
+DerivedData/
+*.o
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+*.xcresult
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Per-user Xcode state (window layout, breakpoints, selected scheme/device)
+xcuserdata/
+*.xcuserdatad/
+*.xcscmblueprint
+*.xccheckout
+project.xcworkspace/xcuserdata/
+project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+# ---------------------------------------------------------------------------
+# Swift Package Manager / dependency caches
+# Package.resolved is intentionally NOT ignored when present: it pins
+# MapLibre and LlamaSwift versions for reproducible builds.
+# ---------------------------------------------------------------------------
+.build/
+.swiftpm/
+Packages/
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration/
+
+# CocoaPods / Carthage (not used by this project, ignored defensively)
+Pods/
+Carthage/Build/
+
+# ---------------------------------------------------------------------------
+# Code-signing material and credentials — never commit these
+# ---------------------------------------------------------------------------
+*.mobileprovision
+*.provisionprofile
+*.p12
+*.pfx
+*.cer
+*.certSigningRequest
+*.p8
+*.pem
+*.key
+*.keystore
+*.jks
+ExportOptions.plist
+AuthKey_*.p8
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+*.xcconfig.local
+.env
+.env.*
+!.env.example
+secrets.plist
+Secrets.swift
+Secrets.xcconfig
+
+# ---------------------------------------------------------------------------
+# AI model weights — downloaded on device at setup time, never committed.
+# Llama-3.2-1B-Instruct-Q4_K_M.gguf is ~808 MB;
+# SmolVLM-500M-Instruct-Q8_0.gguf + mmproj are ~546 MB together.
+# ---------------------------------------------------------------------------
+*.gguf
+*.ggml
+*.bin
+*.safetensors
+*.partial
+Models/
+
+# ---------------------------------------------------------------------------
+# Local test data and private runtime artefacts
+# Pairing QR codes, pairing secrets and recorded coordinates must stay local.
+# ---------------------------------------------------------------------------
+*.mapdata
+OfflineRoadMaps/
+TestData/
+LocalTestData/
+pairing-*.png
+pairing-*.json
+*-pairing-qr.*
+locations-*.json
+*.gpx
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Device logs and crash reports
+*.crash
+*.ips
+*.log
+Logs/
+
+# ---------------------------------------------------------------------------
+# macOS / editor noise
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+ehthumbs.db
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# ---------------------------------------------------------------------------
+# Demo video working files (large; link the final video from the README)
+# ---------------------------------------------------------------------------
+media/raw/
+media/exports/
+*.mov
+*.mp4
+*.m4v
+*.aif
+*.aiff
+*.wav

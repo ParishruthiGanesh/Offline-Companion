@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.parishruthi.OfflineCompanion.pairing</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>offlinecompanion</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Connect to your explicitly paired nearby phone to exchange encrypted location updates, including background updates when iOS permits.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Scan the other phone’s private QR to send a connection invitation.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>While you enable Bluetooth location sharing, send fresh location readings to your paired nearby phone even with the screen locked. Turn sharing off in the app at any time.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record your spoken question for on-device speech recognition.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Turn your spoken question into editable text using on-device speech recognition when available. Audio is not sent to an online transcription service.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>location</string>
+	</array>
+</dict>
+</plist>
