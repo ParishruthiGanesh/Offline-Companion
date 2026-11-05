@@ -91,10 +91,10 @@ checked at the source level.
 | GPS readings and saved-point behaviour | ✅ **User-tested in earlier builds** |
 | Compass direction arrow | ✅ **User-tested in earlier builds** |
 | QR → invitation → Accept pairing handshake | ✅ **User-tested (simplified flow)** |
-| Voice input (Apple on-device English (US)) | 🔶 **Needs device testing** |
-| Latest save-place feedback behaviour (refresh-GPS / disabled-Save reasons) | 🔶 **Needs device testing** |
-| MapLibre offline map rendering | 🔶 **Needs device testing** |
-| Experimental offline walking routes | 🔶 **Needs device testing** |
+| Voice input (Apple on-device English (US)) | ✅ **Demonstrated on device** — captured in airplane mode in the demo recordings |
+| Latest save-place feedback behaviour (refresh-GPS / disabled-Save reasons) | ✅ **Demonstrated on device** |
+| MapLibre offline map rendering | ✅ **Demonstrated on device** — Auburn streets and labels render in airplane mode |
+| Experimental offline walking routes | ✅ **Demonstrated on device** — a 225 m route over mapped paths, computed offline |
 | Sustained background location delivery while locked | 🔶 **Needs device testing** |
 | Additional map downloads via public Overpass services | ❌ **Unreliable** — has failed during testing; do not depend on it |
 
@@ -555,14 +555,35 @@ revoked, or iOS suspended execution. Background delivery is not guaranteed.
 
 ## Demo video
 
-### 🎬 Demo video coming soon
+A 2:25 walkthrough has been cut from real device recordings for the Meta Global AI Developer
+Hackathon submission.
 
-A recorded walkthrough is being prepared for the Meta Global AI Developer Hackathon submission and
-will be linked here. A planned outline and narration draft are in
-[`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md).
+### 🎬 Hosted link coming soon
 
-Nothing in this section is a placeholder for a result that has not happened: when the recording
-exists, the real link replaces this notice.
+> The video file is not committed to this repository (see `.gitignore`). **The public link will
+> replace this line once the video is uploaded.** Nothing here stands in for a result that has not
+> happened.
+
+Everything else about the video is in [`docs/demo/`](docs/demo):
+
+- [`docs/demo/README.md`](docs/demo/README.md) — how the edit was built, how to rebuild or re-cut
+  it, what was staged, and every claim checked against the code
+- [`docs/demo/VOICEOVER-SCRIPT.md`](docs/demo/VOICEOVER-SCRIPT.md) — narration, on-screen captions
+  and the source timecode of every shot
+- [`docs/demo/OfflineCompanion-demo.srt`](docs/demo/OfflineCompanion-demo.srt) — subtitle track
+- [`docs/demo/thumbnail.png`](docs/demo/thumbnail.png) — title card
+- [`docs/demo/build/`](docs/demo/build) — the scripts that generate the whole edit
+
+**What the video shows, and what it does not.** Every phone screen in it is unaltered footage
+recorded in airplane mode — the Meta Llama answer (4.6 s, generated on device), voice input,
+read-aloud, the experimental SmolVLM photo answer, the bundled Auburn map, a saved place, the
+compass, and a 225 m offline walking route. The opening scenes and the explainer cards are
+original vector graphics, badged on screen as illustrations. The pairing handshake is shown as a
+labelled **diagram**, because no recording captures that flow. The saved place's real coordinates
+are cropped out of every frame.
+
+The earlier planning outline is kept at [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) for
+reference; `docs/demo/` describes the video as it was actually cut.
 
 ## Licensing and attribution
 
@@ -608,7 +629,13 @@ No Google Maps, Mapbox service, or OpenFreeMap data is used. No map API key is r
 │   ├── MapLibre-LICENSE.md       BSD 2-Clause notice
 │   └── NotoSans-OFL.txt          SIL OFL notice
 ├── docs/
-│   └── DEMO_SCRIPT.md            Demo video outline and narration draft
+│   ├── DEMO_SCRIPT.md            Original demo-video planning outline
+│   └── demo/                     The video as actually cut
+│       ├── README.md             Build/re-cut instructions, staged graphics, claim checks
+│       ├── VOICEOVER-SCRIPT.md   Narration, captions and per-shot source timecodes
+│       ├── OfflineCompanion-demo.srt
+│       ├── thumbnail.png
+│       └── build/                Scripts that generate the edit end to end
 ├── START_HERE.md                 Build-by-build release notes, newest first
 ├── THIRD_PARTY_NOTICES.md        Full attribution and data provenance
 ├── LICENSE                       MIT, for the application source code

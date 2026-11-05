@@ -2,6 +2,7 @@
 # Xcode build output
 # ---------------------------------------------------------------------------
 build/
+!docs/demo/build/
 DerivedData/
 *.o
 *.hmap

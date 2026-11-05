@@ -1,0 +1,76 @@
+1
+00:00:00,600 --> 00:00:07,004
+She told someone where she was going. She just didn't expect the signal to disappear.
+
+2
+00:00:07,284 --> 00:00:13,606
+It happens on a road you don't know. On a trail that stopped looking familiar an hour ago.
+
+3
+00:00:13,886 --> 00:00:19,157
+The moment you most need a second opinion is often the moment you have no connection.
+
+4
+00:00:19,437 --> 00:00:22,514
+Offline Companion was built for that moment.
+
+5
+00:00:23,264 --> 00:00:27,119
+We needed intelligence that lives on the phone itself.
+
+6
+00:00:27,398 --> 00:00:36,449
+So we looked at what could actually run inside an iPhone's memory. We chose Meta Llama 3.2 1B Instruct.
+
+7
+00:00:36,729 --> 00:00:43,668
+Watch the status bar. Airplane mode. No Wi-Fi. No cellular.
+
+8
+00:00:43,948 --> 00:00:48,808
+A real question. The kind you would actually ask out there.
+
+9
+00:00:49,087 --> 00:00:57,239
+4.6 seconds. Generated on this device. No cloud, no API key, no account.
+
+10
+00:00:57,519 --> 00:01:09,003
+Meta Llama powers the text. Photos use SmolVLM, a Hugging Face model, not Meta. It is experimental, and at this size it makes mistakes.
+
+11
+00:01:09,283 --> 00:01:17,115
+Voice input and reading aloud are Apple's, also on device. Speak, review the text, then send.
+
+12
+00:01:17,864 --> 00:01:20,023
+Then there is knowing where you are.
+
+13
+00:01:20,304 --> 00:01:29,559
+Central Auburn is built in as OpenStreetMap data, rendered with MapLibre. Nothing to fetch. Still airplane mode.
+
+14
+00:01:29,839 --> 00:01:37,282
+Save where you're standing. Your car, your camp, the trailhead. And the compass points you back to it.
+
+15
+00:01:37,562 --> 00:01:46,706
+And it will route you. 225 metres on real mapped paths, calculated on the phone, with no connection at all.
+
+16
+00:01:46,986 --> 00:01:56,083
+You can also pair one trusted person nearby. GPS readings then move between the two phones over encrypted Bluetooth.
+
+17
+00:01:56,363 --> 00:02:04,740
+Every position carries its own timestamp. When the link drops, the app says so, and shows the last known location.
+
+18
+00:02:05,490 --> 00:02:16,569
+This is a prototype. No satellite. No SOS. No rescue dispatch. It does not promise to keep anyone safe.
+
+19
+00:02:16,849 --> 00:02:23,397
+What it does is put a capable Meta Llama model in your pocket, and keep it working when nothing else does.
+

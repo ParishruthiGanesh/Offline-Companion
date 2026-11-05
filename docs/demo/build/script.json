@@ -1,0 +1,135 @@
+[
+ {
+  "id": "L01",
+  "sec": 1,
+  "say": "She told someone where she was going. She just didn't expect the signal to disappear.",
+  "cap": "She told someone where she was going.\nShe just didn't expect the signal to disappear.",
+  "srt": "She told someone where she was going. She just didn't expect the signal to disappear."
+ },
+ {
+  "id": "L02",
+  "sec": 1,
+  "say": "It happens on a road you don't know. On a trail that stopped looking familiar an hour ago.",
+  "cap": "On a road you don't know. On a trail that\nstopped looking familiar an hour ago.",
+  "srt": "It happens on a road you don't know. On a trail that stopped looking familiar an hour ago."
+ },
+ {
+  "id": "L03",
+  "sec": 1,
+  "say": "The moment you most need a second opinion is often the moment you have no connection.",
+  "cap": "The moment you most need a second opinion\nis often the moment you have no connection.",
+  "srt": "The moment you most need a second opinion is often the moment you have no connection."
+ },
+ {
+  "id": "L04",
+  "sec": 1,
+  "say": "Offline Companion was built for that moment.",
+  "cap": "Offline Companion was built for that moment.",
+  "srt": "Offline Companion was built for that moment."
+ },
+ {
+  "id": "L05",
+  "sec": 2,
+  "say": "We needed intelligence that lives on the phone itself.",
+  "cap": "",
+  "srt": "We needed intelligence that lives on the phone itself."
+ },
+ {
+  "id": "L06",
+  "sec": 2,
+  "say": "So we looked at what could actually run inside an iPhone's memory. We chose Meta Llama three point two, one B Instruct.",
+  "cap": "",
+  "srt": "So we looked at what could actually run inside an iPhone's memory. We chose Meta Llama 3.2 1B Instruct."
+ },
+ {
+  "id": "L07",
+  "sec": 2,
+  "say": "Watch the status bar. Airplane mode. No Wi-Fi. No cellular.",
+  "cap": "Airplane mode \u00b7 No Wi-Fi \u00b7 No cellular",
+  "srt": "Watch the status bar. Airplane mode. No Wi-Fi. No cellular."
+ },
+ {
+  "id": "L08",
+  "sec": 2,
+  "say": "A real question. The kind you would actually ask out there.",
+  "cap": "A real question, asked offline",
+  "srt": "A real question. The kind you would actually ask out there."
+ },
+ {
+  "id": "L09",
+  "sec": 2,
+  "say": "Four point six seconds. Generated on this device. No cloud, no A P I key, no account.",
+  "cap": "Powered by Meta Llama 3.2 \u2014 text inference runs on the device\nNo cloud inference required for text answers",
+  "srt": "4.6 seconds. Generated on this device. No cloud, no API key, no account."
+ },
+ {
+  "id": "L10",
+  "sec": 2,
+  "say": "Meta Llama powers the text. Photos use Smoll V L M, a Hugging Face model, not Meta. It is experimental, and at this size it makes mistakes.",
+  "cap": "Photos: SmolVLM-500M (Hugging Face) \u2014 NOT a Meta model\nExperimental: small models miss and misidentify things",
+  "srt": "Meta Llama powers the text. Photos use SmolVLM, a Hugging Face model, not Meta. It is experimental, and at this size it makes mistakes."
+ },
+ {
+  "id": "L11",
+  "sec": 2,
+  "say": "Voice input and reading aloud are Apple's, also on device. Speak, review the text, then send.",
+  "cap": "Voice input & read-aloud: Apple on-device speech\nSpeech becomes editable text \u2014 nothing sends automatically",
+  "srt": "Voice input and reading aloud are Apple's, also on device. Speak, review the text, then send."
+ },
+ {
+  "id": "L12",
+  "sec": 3,
+  "say": "Then there is knowing where you are.",
+  "cap": "Then there is knowing where you are.",
+  "srt": "Then there is knowing where you are."
+ },
+ {
+  "id": "L13",
+  "sec": 3,
+  "say": "Central Auburn is built in as Open Street Map data, rendered with Map Libre. Nothing to fetch. Still airplane mode.",
+  "cap": "Bundled offline map: MapLibre + \u00a9 OpenStreetMap contributors\nCentral Auburn, Alabama \u2014 not nationwide",
+  "srt": "Central Auburn is built in as OpenStreetMap data, rendered with MapLibre. Nothing to fetch. Still airplane mode."
+ },
+ {
+  "id": "L14",
+  "sec": 3,
+  "say": "Save where you're standing. Your car, your camp, the trailhead. And the compass points you back to it.",
+  "cap": "Named saved places + compass bearing\nGPS: Apple Core Location \u2014 straight-line direction, not a safe route",
+  "srt": "Save where you're standing. Your car, your camp, the trailhead. And the compass points you back to it."
+ },
+ {
+  "id": "L15",
+  "sec": 3,
+  "say": "And it will route you. Two hundred and twenty five metres on real mapped paths, calculated on the phone, with no connection at all.",
+  "cap": "Offline walking route on stored OpenStreetMap paths\nExperimental \u2014 no closures, hazards or safety data",
+  "srt": "And it will route you. 225 metres on real mapped paths, calculated on the phone, with no connection at all."
+ },
+ {
+  "id": "L16",
+  "sec": 3,
+  "say": "You can also pair one trusted person nearby. G P S readings then move between the two phones over encrypted Bluetooth.",
+  "cap": "",
+  "srt": "You can also pair one trusted person nearby. GPS readings then move between the two phones over encrypted Bluetooth."
+ },
+ {
+  "id": "L17",
+  "sec": 3,
+  "say": "Every position carries its own timestamp. When the link drops, the app says so, and shows the last known location.",
+  "cap": "Connection does not prove a location is fresh\nBackground delivery is not guaranteed",
+  "srt": "Every position carries its own timestamp. When the link drops, the app says so, and shows the last known location."
+ },
+ {
+  "id": "L18",
+  "sec": 4,
+  "say": "This is a prototype. No satellite. No S O S. No rescue dispatch. It does not promise to keep anyone safe.",
+  "cap": "",
+  "srt": "This is a prototype. No satellite. No SOS. No rescue dispatch. It does not promise to keep anyone safe."
+ },
+ {
+  "id": "L19",
+  "sec": 4,
+  "say": "What it does is put a capable Meta Llama model in your pocket, and keep it working when nothing else does.",
+  "cap": "",
+  "srt": "What it does is put a capable Meta Llama model in your pocket, and keep it working when nothing else does."
+ }
+]
